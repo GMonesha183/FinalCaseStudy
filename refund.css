@@ -1,0 +1,149 @@
+/* Refund Container */
+.refund-container {
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+.refund-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Refund Request Form */
+.refund-request {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.refund-request h3 {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.refund-request input {
+  width: 45%;
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.refund-request button {
+  padding: 10px 20px;
+  background-color: #C19A6B;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.refund-request button:hover {
+  background-color: #A57C55; /* slightly darker for hover */
+}
+
+/* Refund List Table */
+.refund-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.refund-list th, .refund-list td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.refund-list th {
+  background-color: #C19A6B;
+  color: white;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.refund-list tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Status Badges */
+.refund-status {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+.refund-status.pending { background-color: orange; }
+.refund-status.approved { background-color: green; }
+.refund-status.rejected { background-color: red; }
+
+/* Approve & Reject Buttons */
+.refund-list button {
+  padding: 6px 12px;
+  margin: 2px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.refund-list button.approve {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
+
+.refund-list button.approve:hover {
+  background-color: #45a049;
+}
+
+.refund-list button.reject {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+.refund-list button.reject:hover {
+  background-color: #d32f2f;
+}
+
+/* No refunds message */
+.refund-list p {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .refund-request input {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .refund-request button {
+    width: 100%;
+  }
+
+  .refund-list th, .refund-list td {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .refund-request {
+    padding: 15px;
+  }
+}

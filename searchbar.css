@@ -1,0 +1,202 @@
+/* Hero wrapper for search bar */
+.search-hero {
+  width: 100%;
+  min-height: 450px;               /* height of hero section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+.hero-title {
+  font-size: clamp(32px, 4vw, 48px);
+  color: white;  /* Change this to any color you want */
+  font-weight: 800;
+  margin-bottom: 30px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Search bar container */
+.search-wrap {
+  display: flex;
+  flex-wrap: flex;                 /* wrap on small screens */
+  gap: 15px;
+  padding: 20px 25px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.95);  /* slightly transparent white */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  max-width: 1000px;
+  width: 100%;
+  z-index: 2;
+}
+
+/* Each field in search bar */
+.field {
+  flex: 1;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.field.grow {
+  flex: 2;                         /* larger field for destination */
+}
+
+/* Labels above inputs */
+.label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color:#555;
+}
+
+/* Input and select styles */
+.input {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  outline: none;
+  background: #fff;
+}
+
+.input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Search button */
+.btn-cta {
+  height: 45px;
+  padding: 0 25px;
+  border: none;
+  border-radius: 10px;
+  background: #3b82f6;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-cta:hover {
+  background: #2563eb;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 960px) {
+  .search-wrap {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+.section {
+  margin: 60px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #222;
+}
+
+/* Horizontal scroll cards */
+.cards {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  scrollbar-width: none; /* hide scrollbar in Firefox */
+}
+.cards::-webkit-scrollbar {
+  display: none; /* hide scrollbar in Chrome/Safari */
+}
+
+.card {
+  min-width: 220px;
+  flex: 0 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,.08);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+}
+
+.card-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-weight: 600;
+  margin: 12px 0 4px;
+  font-size: 1rem;
+  color: #222;
+}
+
+.card-sub {
+  color: #666;
+  font-size: 0.85rem;
+  margin-bottom: 14px;
+}
+.cards-wrapper {
+  position: relative;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 5;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.scroll-btn.left { left: -15px; }
+.scroll-btn.right { right: -15px; }
+
+.scroll-btn:hover { 
+  background: #fff; 
+  color: #3b82f6; 
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-right span {
+  font-weight: 600;
+  color: #222;
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: #3b82f6;
+  font-weight: 600;
+}

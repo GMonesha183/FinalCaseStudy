@@ -1,0 +1,133 @@
+/* addroom.css */
+
+/* Page wrapper */
+.add-room-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 2rem;
+}
+
+/* Form card */
+.add-room-form {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Heading */
+.add-room-form h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+  text-align: center;
+}
+
+/* Inputs */
+.add-room-form input,
+.add-room-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.add-room-form input:focus,
+.add-room-form textarea:focus {
+  border-color: #7b3f00;
+  box-shadow: 0 0 0 2px rgba(123, 63, 0, 0.2);
+}
+
+/* Don't stretch checkboxes */
+.add-room-form input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  cursor: pointer;
+  accent-color: #7b3f00;
+  flex-shrink: 0;
+}
+
+/* Checkbox + label inline */
+.add-room-form .checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #374151;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Buttons */
+.add-room-form button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.add-room-form .btn-save {
+  background-color: #7b3f00;
+  color: #fff;
+}
+
+.add-room-form .btn-save:hover {
+  background-color: #622f00;
+}
+
+.add-room-form .btn-cancel {
+  background-color: transparent;
+  color: #7b3f00;
+  border: 1px solid #7b3f00;
+  margin-top: 0.5rem;
+}
+
+.add-room-form .btn-cancel:hover {
+  background-color: #7b3f00;
+  color: #fff;
+}
+
+/* Add Room button (on HotelDetails page) */
+.btn-add-room {
+  background: linear-gradient(135deg, #a17558, #7b5c44);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 16px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.btn-add-room:hover {
+  background: linear-gradient(135deg, #7b5c44, #a17558);
+  transform: scale(1.05);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .add-room-form {
+    padding: 1.5rem;
+    width: 100%;
+  }
+}

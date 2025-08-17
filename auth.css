@@ -1,0 +1,104 @@
+/* Auth Page Wrapper */
+.auth-wrap {
+  min-height: calc(100vh - 64px - 80px);
+  display: grid;
+  place-items: center;
+  padding: 40px 20px;
+  background: radial-gradient(1000px 300px at 50% -10%, #eee6dc, transparent);
+  font-family: 'Arial', sans-serif;
+  animation: fadeIn 0.6s ease;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Auth Card */
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 2rem;
+  display: grid;
+  gap: 1.2rem;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auth-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* Input Fields */
+.a-input {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.a-input:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(142, 110, 83, 0.15);
+}
+
+/* Input States */
+.a-input.error {
+  border-color: #e63946;
+  box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.2);
+  animation: shake 0.3s ease;
+}
+
+.a-input.success {
+  border-color: #2a9d8f;
+  box-shadow: 0 0 0 2px rgba(42, 157, 143, 0.2);
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
+
+/* Buttons */
+.a-btn {
+  border: none;
+  background: var(--brand);
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.a-btn:hover {
+  background: var(--brand-700);
+  transform: translateY(-2px);
+}
+
+/* Muted Text */
+.muted {
+  color: var(--muted);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* Links inside muted text */
+.muted a {
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.muted a:hover {
+  text-decoration: underline;
+}
